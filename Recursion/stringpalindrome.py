@@ -11,7 +11,7 @@ def pal(lis):
 a=['r','a','c','e','c','a','r'] 
 
 string1=''.join(pal(a.copy()))
-string2=''.join(a)
+string2=''.join(v)
 
 if string1==string2:
     print("its palindrome")
