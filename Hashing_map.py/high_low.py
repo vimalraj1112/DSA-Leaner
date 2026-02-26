@@ -11,10 +11,7 @@ min_key=0
 min_val=100
 
 for i in a:
-    if freq.get(i):
-        freq[i]+=1
-    else:
-        freq[i]=1
+    freq[i]=freq.get(i,0)+1
 for i in freq:
     if freq[i]<min_val:
         min_val=freq[i]
