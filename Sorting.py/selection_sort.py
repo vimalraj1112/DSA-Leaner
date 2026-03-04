@@ -1,13 +1,16 @@
-import array
-def rel(a):
-
+def sel(a):
     for i in range(len(a)-1):
+        min_val=i
         for j in range(i,len(a)):
-            if a[i]>a[j]:
-                temp=a[j]
-                temp1=a[i]
-                a[i]=temp
-                a[j]=temp1
-    return a
-             
-print(rel([13,46,24,52,20,9]))
+            if a[min_val]>a[j]:
+                min_val=j
+        if i!=min_val:
+            temp=a[i]
+            a[i]=a[min_val]
+            a[min_val]=temp
+
+    return a        
+
+            
+
+print(sel([5,4,3,2,1]))   
