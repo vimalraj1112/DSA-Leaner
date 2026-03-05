@@ -6,7 +6,8 @@ def ins(a):
             a[j+1]=a[j]
             j-=1
         a[j+1]=key
-    return a        
+
+    return a              
 
 
 
