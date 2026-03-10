@@ -4,7 +4,7 @@ def mer(a):
     i=0
     j=mid+1
     
-    print(i,j,mid)
+    
     while i<=mid and j<len(a):
         if a[i]<a[j]:
             c.append(a[i])
