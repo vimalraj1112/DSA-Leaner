@@ -16,21 +16,22 @@ for i in range(1,num+1):
 
 print(max(val))        """
 
-"""
-def gcd(n1,n2):
-    for i in range(min(n1,n2),0,-1):
-        if n1%i==0 and n2%i==0:
+def gcd(x,y):
+    for i in range(min(x,y),0,-1):
+        if x%i==0 and y%i==0:
             return i
-print(gcd(5,12))
-"""
 
-def gcd(n1,n2): ##Eucladian method
 
-    while n1!=0 and n2!=0:
-        if n1>n2:
-            n1=n1%n2
-        else:
-            n2=n2%n1
+print(gcd(12,6))    
 
-    return max(n1,n2) 
-print(gcd(1,1))           
+
+# def gcd(n1,n2): ##Eucladian method
+
+#     while n1!=0 and n2!=0:
+#         if n1>n2:
+#             n1=n1%n2
+#         else:
+#             n2=n2%n1
+
+#     return max(n1,n2) 
+# print(gcd(12,6))           

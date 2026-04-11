@@ -1,7 +1,3 @@
-low=0
-
-
-
 def rec(a,low,high):
     if low==high:
         return
@@ -35,7 +31,7 @@ def mer(a,low,mid,high):
     while j<=high:
         temp.append(a[j])
         j+=1
-    print(temp)    
+        
 
     for i in range(low,high+1):
         a[i]=temp[i-low]

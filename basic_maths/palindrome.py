@@ -1,13 +1,17 @@
-x=121
-v=x
+x=int(input('enter the number:'))
+s=x
 rev=0
 
 while x>0:
-    digit=x%10
-    rev=rev*10+digit
+    rem=x%10
+    rev=rev*10+rem
     x=x//10
 
-if v==rev:
+if s==rev:
     print(True)
 else:
-    print(False)        
+    print(False)  
+
+    
+
+
