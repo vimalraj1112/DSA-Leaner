@@ -4,33 +4,14 @@ class Node():
         self.data=data
         self.next=None
 
-class linkedlist():
+class MyLinkedList:
+
+
     def __init__(self):
         self.head=None
+        
 
-    def addAtTail(self,data):
-        new_node=Node(data) 
-
-        if not self.head:
-            self.head=new_node
-            return 
-
-        current=self.head
-
-        while current.next:
-            current=current.next
-
-        current.next=new_node
-
-    def addAtHead(self,data):
-        new_node=Node(data)
-        if not self.head:
-            self.head= new_node
-
-        new_node.next=self.head
-        self.head=new_node
-
-    def get(self,index):
+    def get(self, index: int) -> int:
         if not self.head:
             return -1
         i=0
@@ -42,13 +23,35 @@ class linkedlist():
             current=current.next
             i+=1
         return -1
-    
-    def addAtIndex(self,index,data):
-        new_node=Node(data)
+        
+
+    def addAtHead(self, val: int) -> None:
+        new_node=Node(val)
         if not self.head:
-            if index==0:
-                self.head=new_node
-            return
+            self.head= new_node
+
+        new_node.next=self.head
+        self.head=new_node
+        
+
+    def addAtTail(self, val: int) -> None:
+        new_node=Node(val) 
+
+        if not self.head:
+            self.head=new_node
+            return 
+
+        current=self.head
+
+        while current.next:
+            current=current.next
+
+        current.next=new_node
+        
+
+    def addAtIndex(self, index: int, val: int) -> None:
+        new_node=Node(val)
+        
         
         if index==0:
             if self.head:
@@ -65,23 +68,22 @@ class linkedlist():
                 new_node.next=current.next
                 current.next=new_node
             current=current.next    
-            i+=1    
+            i+=1  
+        
 
-
-                
-            
-    def display(self):
+    def deleteAtIndex(self, index: int) -> None:
+        if not self.head:
+            return
+        
+        if index==0:
+            self.head=self.head.next  
+        
         current=self.head
+        i=0
         while current:
-            print(current.data,end=" -> ")
+            if index-1==i:
+                if current.next:
+
+                    current.next=current.next.next
             current=current.next
-
-linkedlist=linkedlist()
-linkedlist.addAtTail(1) 
-linkedlist.addAtTail(2)
-linkedlist.addAtTail(3)
-linkedlist.addAtHead(0)
-print(linkedlist.get(7))
-print(linkedlist.addAtIndex(0,'new'))
-
-linkedlist.display()     
+            i+=1 
