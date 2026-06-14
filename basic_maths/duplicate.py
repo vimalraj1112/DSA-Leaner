@@ -9,7 +9,7 @@ def ans():
     for i in range(1,n):
         if nums[count] != nums[i]:
             count+=1
-            nums[count+1]=nums[i]
+            nums[count]=nums[i]
             
 
 
