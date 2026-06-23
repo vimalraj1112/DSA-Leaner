@@ -1,0 +1,12 @@
+def ans():
+    haystack = "sadbutsad"
+    needle = "sad"
+
+    for i in range(len(haystack)):
+        if haystack[i:i+len(needle)] == needle:
+            return i
+        
+    else:
+        return -1
+
+print(ans())
