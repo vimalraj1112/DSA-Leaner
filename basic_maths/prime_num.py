@@ -1,4 +1,4 @@
-#Check if a number is prime or not
+
 
 from math import *
 def prime(n):
