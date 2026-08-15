@@ -31,21 +31,43 @@
 #     return d
 # print(ans())    
 
+# def ans():
+#     n=15
+
+#     ans=[]
+
+#     for i in range(1,n+1):
+#         if i%3==0 and i%5==0:
+#             ans.append('FizzBuzz')
+#         if i%3==0:
+#             ans.append('Fizz')
+#         if i%5==0:
+#             ans.append('Buzz')
+#         if i%3!=0 and i%5!=0:
+#             ans.append(str(i))
+
+#     return ans
+
+# print(ans())        
+
+# def ans():
+#     s = "Hello, my name is John"
+
+#     a=[]
+
+#     x=s.split()
+#     print(len(x))
+
+# print(ans())
+
 def ans():
-    n=15
+    w='aba'
+    a=0
 
-    ans=[]
-
-    for i in range(1,n+1):
-        if i%3==0 and i%5==0:
-            ans.append('FizzBuzz')
-        if i%3==0:
-            ans.append('Fizz')
-        if i%5==0:
-            ans.append('Buzz')
-        if i%3!=0 and i%5!=0:
-            ans.append(str(i))
-
-    return ans
-
-print(ans())        
+    for i in range(len(w)):
+        for j in range(i+1):
+            print(j)
+            if w[j] in 'aeiou':
+                a+=1
+    return a 
+print(ans())           
