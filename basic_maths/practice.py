@@ -60,14 +60,46 @@
 
 # print(ans())
 
-def ans():
-    w='aba'
-    a=0
+# def ans():
+#     w='aba'
+#     a=0
 
-    for i in range(len(w)):
-        for j in range(i+1):
-            print(j)
-            if w[j] in 'aeiou':
-                a+=1
-    return a 
-print(ans())           
+#     for i in range(len(w)):
+#         for j in range(i+1):
+#             print(j)
+#             if w[j] in 'aeiou':
+#                 a+=1
+#     return a 
+# print(ans())   
+
+def ans():
+
+    date = "2019-02-10"
+
+    y=''
+    day=''
+    m=''
+
+    d=[0,31,59,90,120,151,181,212,243,273,304,334]
+
+    y+=date[0]
+    y+=date[1]
+    y+=date[2]
+    y+=date[3]
+    m+=date[5]
+    m+=date[6]
+    day+=date[8]
+    day+=date[9]
+
+    x=d[int(m)-1]
+    x+=int(day)
+
+    if int(y)%400==0:
+        return x+1
+    return x
+
+
+    
+
+print(ans())    
+        
