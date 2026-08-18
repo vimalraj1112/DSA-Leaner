@@ -72,34 +72,62 @@
 #     return a 
 # print(ans())   
 
-def ans():
+# def ans():
 
-    date = "2019-02-10"
+#     date = "2019-02-10"
 
-    y=''
-    day=''
-    m=''
+#     y=''
+#     day=''
+#     m=''
 
-    d=[0,31,59,90,120,151,181,212,243,273,304,334]
+#     d=[0,31,59,90,120,151,181,212,243,273,304,334]
 
-    y+=date[0]
-    y+=date[1]
-    y+=date[2]
-    y+=date[3]
-    m+=date[5]
-    m+=date[6]
-    day+=date[8]
-    day+=date[9]
+#     y+=date[0]
+#     y+=date[1]
+#     y+=date[2]
+#     y+=date[3]
+#     m+=date[5]
+#     m+=date[6]
+#     day+=date[8]
+#     day+=date[9]
 
-    x=d[int(m)-1]
-    x+=int(day)
+#     x=d[int(m)-1]
+#     x+=int(day)
 
-    if int(y)%400==0:
-        return x+1
-    return x
+#     if int(y)%400==0:
+#         return x+1
+#     return x
 
 
     
 
-print(ans())    
+# print(ans())    
         
+def ans():
+    n=[3,9,2,1,7]
+    k=3
+
+    d={}
+
+    for i in range(len(n)-k+1):
+        b=n[i:i+k]
+        for j in b:
+            if j in d:
+                d[j]+=1
+            else:
+                d[j]=1
+
+    ans=-1
+    for j in d:
+        if d[j]==1:
+            ans=max(ans,j)
+
+    return ans        
+
+
+
+                            
+
+print(ans())            
+
+            
