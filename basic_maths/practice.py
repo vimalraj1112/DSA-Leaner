@@ -103,31 +103,58 @@
 
 # print(ans())    
         
-def ans():
-    n=[3,9,2,1,7]
-    k=3
+# def ans():
+#     n=[3,9,2,1,7]
+#     k=3
 
-    d={}
+#     d={}
 
-    for i in range(len(n)-k+1):
-        b=n[i:i+k]
-        for j in b:
-            if j in d:
-                d[j]+=1
-            else:
-                d[j]=1
+#     for i in range(len(n)-k+1):
+#         b=n[i:i+k]
+#         for j in b:
+#             if j in d:
+#                 d[j]+=1
+#             else:
+#                 d[j]=1
 
-    ans=-1
-    for j in d:
-        if d[j]==1:
-            ans=max(ans,j)
+#     ans=-1
+#     for j in d:
+#         if d[j]==1:
+#             ans=max(ans,j)
 
-    return ans        
+#     return ans        
 
 
 
                             
 
-print(ans())            
+# print(ans())            
 
+def ans():
+    n = [2,3,4,3,4] 
+    a=0
+    b=0
+    ans=0
+
+    for i in range(1,len(n)):
+        diff=n[i]-n[i-1]
+        if diff==1:
+            a+=1
+        else:
+            ans=max(ans,a)
+            a=2
+        b=1
+        if diff==-1:
+            if b==1:
+                a+=1
+            b=1
+        else:
+            ans=max(ans,a)
+            a=0    
+                
+    ans=max(ans,a)
+    if ans==0:
+        return -1
+    return ans
+print(ans())        
             
