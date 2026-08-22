@@ -130,31 +130,46 @@
 
 # print(ans())            
 
-def ans():
-    n = [2,3,4,3,4] 
-    a=0
-    b=0
-    ans=0
+# def ans():
+#     n = [2,3,4,3,4] 
+#     a=0
+#     b=0
+#     ans=0
 
-    for i in range(1,len(n)):
-        diff=n[i]-n[i-1]
-        if diff==1:
-            a+=1
-        else:
-            ans=max(ans,a)
-            a=2
-        b=1
-        if diff==-1:
-            if b==1:
-                a+=1
-            b=1
-        else:
-            ans=max(ans,a)
-            a=0    
+#     for i in range(1,len(n)):
+#         diff=n[i]-n[i-1]
+#         if diff==1:
+#             a+=1
+#         else:
+#             ans=max(ans,a)
+#             a=2
+#         b=1
+#         if diff==-1:
+#             if b==1:
+#                 a+=1
+#             b=1
+#         else:
+#             ans=max(ans,a)
+#             a=0    
                 
-    ans=max(ans,a)
-    if ans==0:
-        return -1
-    return ans
-print(ans())        
+#     ans=max(ans,a)
+#     if ans==0:
+#         return -1
+#     return ans
+# print(ans())      
+
+def ans():
+    n=23
+    a=n
+    x=0
+    y=1
+    for i in range(len(str(n))):
+        x+=a%10
+        y*=a%10
+        a=a//10
+    print(x,y)
+    if n%(x+y)==0:
+        return True
+    return False 
+print(ans())
             
