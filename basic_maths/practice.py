@@ -158,18 +158,37 @@
 #     return ans
 # print(ans())      
 
-def ans():
-    n=23
-    a=n
-    x=0
-    y=1
-    for i in range(len(str(n))):
-        x+=a%10
-        y*=a%10
-        a=a//10
-    print(x,y)
-    if n%(x+y)==0:
-        return True
-    return False 
-print(ans())
+# def ans():
+#     n=23
+#     a=n
+#     x=0
+#     y=1
+#     for i in range(len(str(n))):
+#         x+=a%10
+#         y*=a%10
+#         a=a//10
+#     print(x,y)
+#     if n%(x+y)==0:
+#         return True
+#     return False 
+# print(ans())
             
+def ans():
+    n=[5,0,1,4]
+
+    k=3
+
+    
+    for i in range(len(n)):
+        a=n[0:i+1]
+        b=n[i:len(n)]
+        print(a,b)
+
+        ans=max(a)-min(b)
+        if k>=ans:
+            return i
+    return -1    
+        
+
+               
+print(ans())    
